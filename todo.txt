@@ -1,0 +1,2 @@
+--> tema escuro/claro//
+--> "code": 1006 == erro,status ==400;

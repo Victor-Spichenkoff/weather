@@ -1,0 +1,1 @@
+export const wather_api_key = "c043db88f0df4dbb94f224112242405"
