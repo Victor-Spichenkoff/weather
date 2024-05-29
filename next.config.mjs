@@ -13,7 +13,6 @@ const nextConfig = {
     },
     assetPrefix: isProd ? `/${repoName}/` : '',
     basePath: isProd ? `/${repoName}` : '',
-    distDir: 'docs'
 };
 
 export default nextConfig;
