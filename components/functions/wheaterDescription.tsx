@@ -3,6 +3,7 @@ type WheaterDescription = {
     wheatherInfos: WeatherInfos
 }
 import a from '@/assets/imgs/rain.png'
+import Image from "next/image";
 export default function WheaterDescription({wheatherInfos}: WheaterDescription) {
     if(wheatherInfos == null || wheatherInfos == 'error') return ''
     const getIcon = (): string => {
@@ -22,7 +23,7 @@ export default function WheaterDescription({wheatherInfos}: WheaterDescription) 
 
     return (
     <div className="flex flex-col items-center flex-wrap">
-        <img src={imgPath} alt="" className="w-52" />
+        <Image src={imgPath} alt="" className="w-52" />
 
         <div className="my-4 mt-5">
             {wheatherInfos.location.name}

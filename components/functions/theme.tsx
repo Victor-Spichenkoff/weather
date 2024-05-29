@@ -4,7 +4,7 @@ import Light from '@/assets/icons/ligth.svg'
 import { Theme } from '@/types/theme'
 import { getTheme } from '@/utils/themeStorage'
 
-export default function themeToggle() {
+export default function ThemeToggle() {
     const [theme, setTheme] = useState<Theme>('light')
     useEffect(()=> {
         const current: Theme = getTheme()

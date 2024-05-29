@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out && git commit -m 'Deploy Next.js to gh-pages' && git push origin `git subtree split --prefix out main`:gh-pages --force"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "^14.2.3",
