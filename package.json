@@ -2,7 +2,7 @@
   "name": "weather",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./app/page.tsxv",
+  "homepage": "./app/page.tsx",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
