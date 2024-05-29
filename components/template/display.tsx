@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Search from "../functions/search";
-import { WeatherInfos } from "@/types/wheaterResponse";
-import WheaterDescription from "../functions/wheaterDescription";
+import { useState } from "react"
+import Search from "../functions/search"
+import { WeatherInfos } from "@/types/wheaterResponse"
+import WheaterDescription from "../functions/wheaterDescription"
 
 export default function Display() {
     const [wheaterInfos, setWeatherInfos] = useState<WeatherInfos>(null)

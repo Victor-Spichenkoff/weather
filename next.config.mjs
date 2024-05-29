@@ -13,10 +13,7 @@ const nextConfig = {
     },
     output: "export",
     assetPrefix: isProd ? `/${repoName}/` : '',
-    basePath: isProd ? `/${repoName}` : '',
-    images: {
-      unoptimized: true,
-    },
+    basePath: isProd ? `/${repoName}` : ''
 };
 
 export default nextConfig;
