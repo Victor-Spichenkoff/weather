@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'weather';
+
 const nextConfig = {
     webpack(config) {
         config.module.rules.push({
@@ -7,7 +10,9 @@ const nextConfig = {
         });
     
         return config;
-      }
+    },
+    assetPrefix: isProd ? `/${repoName}/` : '',
+    basePath: isProd ? `/${repoName}` : '',
 };
 
 export default nextConfig;
