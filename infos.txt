@@ -6,7 +6,8 @@ https://www.weatherapi.com/my/#
 - TanStak 
 
 // dados para mokar (só teste)
-{
+const WeatherInfosMoked:WeatherInfos = {
+    location: {
         "name": "Sao Paulo",
         "region": "Sao Paulo",
         "country": "Brazil",

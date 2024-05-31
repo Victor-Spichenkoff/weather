@@ -2,13 +2,18 @@ import { WeatherInfos } from "@/types/wheaterResponse"
 import Image from "next/image"
 import HumidityIcon from '@/assets/icons/humidity.svg'
 import AirIcon from '@/assets/icons/air.svg'
+import { publicStart } from "@/global"
 
 type WheaterDescription = {
     wheatherInfos: WeatherInfos
 }
 
+
+
 export default function WheaterDescription({wheatherInfos}: WheaterDescription) {
     if(wheatherInfos == null || wheatherInfos == 'error') return ''
+
+
     const getIcon = (): string => {
         const current = wheatherInfos.current.condition.text
         // if(current == ''){}
@@ -21,17 +26,18 @@ export default function WheaterDescription({wheatherInfos}: WheaterDescription) 
         //vento/neblina
         if(current=='Vento' || current == 'Neblina' || current == 'Fumacento') return '/assets/imgs/mist.png'
         //neve
-        if(current == 'Neve') return '/assets/imgs/snow.png'
-
+        if(current == 'Neve') return './assets/imgs/snow.png'
 
         return '/assets/imgs/404.png'
     }
 
+
     const imgPath = getIcon()
     
+
     return (
     <div className="flex flex-col items-center flex-wrap">
-        <Image src={imgPath} alt="" className="w-52" width={208} height={208}/>
+        <Image src={`${publicStart}${imgPath}`} alt="" className="w-52" width={208} height={208}/>
 
         {/* Topo */}
         <div className="-ml-2 text-5xl relative">
