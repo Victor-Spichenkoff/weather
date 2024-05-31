@@ -20,7 +20,7 @@ export default function WheaterDescription({wheatherInfos}: WheaterDescription) 
         //chuva
         if(current.includes('Chuva') || current == 'Garoa' || current.includes('Tempestade') || current=='Granizo' || current=="Aguaceiros fracos") return '/assets/imgs/rain.png'
         //sol
-        if(current== 'Céu limpo'|| current == "Ensolarado") return '/assets/imgs/clear.png'
+        if(current== 'Céu limpo'|| current == "Ensolarado" || current=='Sol') return '/assets/imgs/clear.png'
         //nublado
         if(current == "Encoberto" || current == "Névoa" || current.toLowerCase().includes('nublado')) return '/assets/imgs/cloud.png'
         //vento/neblina

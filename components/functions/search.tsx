@@ -12,7 +12,7 @@ export default function Search({ setWeatherInfos }: Search) {
 
     const search = async () => {
         try {
-            const res = await axios(`http://api.weatherapi.com/v1/current.json?key=c043db88f0df4dbb94f224112242405&q=${location}&aqi=no&lang=pt`)
+            const res = await axios(`https://api.weatherapi.com/v1/current.json?key=c043db88f0df4dbb94f224112242405&q=${location}&aqi=no&lang=pt`)
             const data:WeatherInfos = res.data
             setWeatherInfos(data)
             console.log(data)
