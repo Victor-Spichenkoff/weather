@@ -13,7 +13,7 @@ export default function WheaterDescription({wheatherInfos}: WheaterDescription) 
         const current = wheatherInfos.current.condition.text
         // if(current == ''){}
         //chuva
-        if(current.includes('Chuva') || current == 'Garoa' || current.includes('Tempestade') || current=='Granizo') return '/assets/imgs/rain.png'
+        if(current.includes('Chuva') || current == 'Garoa' || current.includes('Tempestade') || current=='Granizo' || current=="Aguaceiros fracos") return '/assets/imgs/rain.png'
         //sol
         if(current== 'Céu limpo'|| current == "Ensolarado") return '/assets/imgs/clear.png'
         //nublado

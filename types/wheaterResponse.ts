@@ -18,6 +18,7 @@ type condition_text =
   | "Fumacento"
   | "Vento"
   | "Encoberto"
+  | "Aguaceiros fracos"
 
 export type WeatherInfos = {
     location: {
