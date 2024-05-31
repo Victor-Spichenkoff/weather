@@ -1,28 +1,30 @@
+"use client"
+
 import { useEffect, useState } from 'react'
 import Dark from '@/assets/icons/dark.svg'
 import Light from '@/assets/icons/ligth.svg'
 import { Theme } from '@/types/theme'
-import { getTheme } from '@/utils/themeStorage'
+import { getStorageTheme, setStorageTheme } from '@/utils/themeStorage'
 
 export default function ThemeToggle() {
     const [theme, setTheme] = useState<Theme>('light')
     useEffect(()=> {
-        const current: Theme = getTheme()
+        const current: Theme = getStorageTheme()
         setTheme(current)
+        document.documentElement.classList.add(current)
     }, [])
 
     const toggleThemeAction = () => {
+        
         if(theme == "light") {
             document.documentElement.classList.add('dark')
             setTheme('dark')
-            setTheme('dark')
+            setStorageTheme('dark')
         } else {
             document.documentElement.classList.remove('dark')
             setTheme('light')
-            setTheme('light')
+            setStorageTheme('light')
         }
-        console.log(theme)
-        console.log(document.documentElement.classList)
     }
 
     return (

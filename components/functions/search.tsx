@@ -23,15 +23,15 @@ export default function Search({ setWeatherInfos }: Search) {
 
     return (
         <>
-            <div className="inline p-2">
-                <input type="text" className="text-black inline-block p-1 outline-none rounded-md" placeholder="Local"
+            <div className="inline p-2 text-2xl text-ligth-txt">
+                <input type="text" className=" inline-block p-1 outline-none rounded-md max-w-48" placeholder="Local"
                     value={location} onChange={(e)=>setlocation(e.target.value)}
                 />   
                 <button className="hover:scale-110"
                     onClick={search}
                 >
-                    <SearchIcon className="fill-light dark:fill-dark ml-4 inline
-                        fill-black
+                    <SearchIcon className="fill-dark-txt dark:fill-light-txt ml-4 -mt-1 inline size-7
+                        fill-black 
                     " />
                 </button>
             </div>
