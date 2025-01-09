@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full">
       <Header></Header>
-      <main className="flex-1  flex justify-center items-center">
+      <main className="flex-1  flex justify-center items-center w-screen">
         <Display />
       </main>
       <Footer></Footer>

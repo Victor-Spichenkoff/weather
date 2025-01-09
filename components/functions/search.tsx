@@ -31,10 +31,10 @@ export default function Search({ setWeatherInfos }: Search) {
                     onClick={search}
                 >
                     <SearchIcon className="fill-dark-txt dark:fill-light-txt ml-4 -mt-1 inline size-7
-                        fill-black 
+                        fill-black
                     " />
                 </button>
             </div>
         </>
     )
-} 
+}
